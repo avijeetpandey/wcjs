@@ -1,6 +1,5 @@
-const fs = require("fs/promises");
 const { getNumberOfLines, getFileSizeInBytes } = require("./utils");
-const { ARGUMENT_TYPE } = require("./contants");
+const { ARGUMENT_TYPE } = require("./constants");
 
 const args = process.argv.slice(2);
 
