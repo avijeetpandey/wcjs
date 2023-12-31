@@ -1,4 +1,8 @@
-const { getNumberOfLines, getFileSizeInBytes } = require("./utils");
+const {
+  getNumberOfLines,
+  getFileSizeInBytes,
+  getNumberOfCharactersInFile,
+} = require("./utils");
 const { ARGUMENT_TYPE } = require("./constants");
 
 const args = process.argv.slice(2);
@@ -13,6 +17,10 @@ async function main() {
       break;
     case ARGUMENT_TYPE.NUMBER_OF_LINES:
       await getNumberOfLines(fileName);
+      break;
+    case ARGUMENT_TYPE.CHARACTER_COUNT:
+      await getNumberOfCharactersInFile(fileName);
+      break;
   }
 }
 

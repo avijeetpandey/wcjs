@@ -17,4 +17,16 @@ async function getNumberOfLines(path) {
   console.log(data.toString().split("\n").length);
 }
 
-module.exports = { getFileSizeInBytes, getNumberOfLines };
+/**
+ * function to count number of characters in a file
+ */
+async function getNumberOfCharactersInFile(path) {
+  const data = await fs.readFile(path);
+  console.log(data.length);
+}
+
+module.exports = {
+  getFileSizeInBytes,
+  getNumberOfLines,
+  getNumberOfCharactersInFile,
+};
